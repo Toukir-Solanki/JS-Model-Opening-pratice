@@ -19,3 +19,9 @@ btn_openAll.forEach((btn) => btn.addEventListener("click", toggle_model));
 [btn_Close_model, overlay].forEach((Element) =>
   Element.addEventListener("click", toggle_model)
 );
+
+document.addEventListener("keydown", function (e) {
+  if (e.key === "Escape" && !modal.classList.contains("hidden")) {
+    toggle_model();
+  }
+});
